@@ -33,10 +33,10 @@ const ChartLine = ({
       >
         <div>
           <div className={styles.companyTitle}>{name}</div>
-          <div>
+          <div className={styles.optionsWrapper}>
             {options &&
               options.map((option) => (
-                <React.Fragment key={option.name}>
+                <div key={option.name} className={styles.radioWrapper}>
                   <input
                     type="radio"
                     value={option.name}
@@ -44,8 +44,8 @@ const ChartLine = ({
                     onChange={(e) => handleChangeOption(e, id, option.name)}
                     checked={option.isActive === true}
                   />{" "}
-                  <span className={styles.optionName}>{option.name}</span>
-                </React.Fragment>
+                  <div className={styles.optionName}>{option.name}</div>
+                </div>
               ))}
           </div>
         </div>

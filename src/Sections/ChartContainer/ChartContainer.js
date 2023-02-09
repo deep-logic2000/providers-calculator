@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState, useCallback, useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
@@ -15,7 +14,6 @@ import scalewayLogo from "../../assets/images/scaleway-logo.png";
 import vultrLogo from "../../assets/images/vultr-logo.png";
 
 import styles from "./ChartContainer.module.scss";
-
 
 const linesData = [
   {
@@ -84,7 +82,7 @@ const ChartContainer = () => {
   const transferValue = useSelector(({ price }) => price.transferValue);
   const companiesData = useSelector(({ price }) => price.companiesData);
   const dispatch = useDispatch();
-  const {width} = useViewPort();
+  const { width } = useViewPort();
 
   useEffect(() => {
     dispatch(setCompaniesData(linesData));
@@ -94,10 +92,13 @@ const ChartContainer = () => {
     return linesData.find((line) => line.id === id);
   };
 
-  const onChangeOptionName = useCallback((event, id, nameOfOption) => {
-    setActiveOptionName(event.target.value);
-    dispatch(setSelectedOption(id, nameOfOption, event.target.value));
-  }, [dispatch]);
+  const onChangeOptionName = useCallback(
+    (event, id, nameOfOption) => {
+      setActiveOptionName(event.target.value);
+      dispatch(setSelectedOption(id, nameOfOption, event.target.value));
+    },
+    [dispatch]
+  );
 
   const getPriceValueByOption = (id, optionName) => {
     const line = getLine(id);
@@ -163,7 +164,6 @@ const ChartContainer = () => {
     return !tempArr.some((price) => price < tempArr[index]);
   };
 
-
   return (
     <div className={styles.container}>
       {companiesData.map((line, index) => {
@@ -171,16 +171,18 @@ const ChartContainer = () => {
           (option) => option.isActive
         ).name;
         return (
-          <ChartLine
-            key={index}
-            {...line}
-            priceValue={getPriceValue(line.id, line.options).toFixed(2)}
-            isMinimal={checkIsMinimal(line.id)}
-            options={line.options}
-            onChangeValue={onChangeOptionName}
-            selectedOptionName={selectedOptionName}
-            isMobile={width < 768}
-          />
+          <div className={styles.lineWrapper}>
+            <ChartLine
+              key={index}
+              {...line}
+              priceValue={getPriceValue(line.id, line.options).toFixed(2)}
+              isMinimal={checkIsMinimal(line.id)}
+              options={line.options}
+              onChangeValue={onChangeOptionName}
+              selectedOptionName={selectedOptionName}
+              isMobile={width < 768}
+            />
+          </div>
         );
       })}
     </div>

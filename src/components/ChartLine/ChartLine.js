@@ -49,7 +49,7 @@ const ChartLine = ({
               ))}
           </div>
         </div>
-        <img src={logo} alt={name} style={{ maxWidth: "25px" }} />
+        <img src={logo} alt={name} className={styles.companyLogo} />
       </div>
       <div
         style={{

@@ -17,9 +17,18 @@
   padding-right: 10px;
 }
 
+.companyLogo {
+  max-width: 25px;
+}
+
 @media (max-width: 768px) {
     .companyTitle {
         text-align: center;
+        font-size: 14px;
+      }
+
+      .optionName {
+        font-size: 11px;
       }
 
   .lineDataWrapper {
@@ -32,6 +41,10 @@
     width: 100%;
     min-width: 110px;
     min-height: 70px;
+  }
+
+  .companyLogo {
+    max-width: 20px;
   }
 }
 

@@ -25,7 +25,7 @@ const ChartLine = ({
         alignItems: "center",
         width: isMobile ? "" : "100%",
         flexDirection: isMobile ? "column-reverse" : "row",
-        height: isMobile ? "300px" : "",
+        height: isMobile ? "290px" : "",
       }}
     >
       <div

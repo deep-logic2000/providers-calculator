@@ -56,6 +56,7 @@ const ChartLine = ({
           height: isMobile ? `${priceValue * 2.5}px` : "25px",
           width: isMobile ? "70%" : `${priceValue * 4}px`,
           backgroundColor: isMinimal ? `${color}` : "lightGray",
+          borderRadius: isMobile ? "3px 3px 0 0" : "0 3px 3px 0",
         }}
       ></div>
       <span className={styles.priceValue}>{priceValue}</span>

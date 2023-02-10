@@ -50,7 +50,6 @@
     justify-content: space-between;
     width: 100%;
     min-width: 100%;
-    // min-width: 110px;
     max-width: min-content;
     min-height: 70px;
   }
@@ -63,7 +62,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // align-items: start;
 
     & input {
       height: 8px;
@@ -73,10 +71,10 @@
 
   .optionsWrapper {
     display: flex;
-    // flex-wrap: wrap;
-    // justify-content: space-between;
-    // align-items: center;
-    // margin-top: 20px;
+  }
+
+  .priceValue {
+    font-size: 11px;
   }
 }
 
@@ -91,9 +89,5 @@
       height: 6px;
       width: 6px;
     }
-  }
-
-  .priceValue {
-    font-size: 11px;
   }
 }

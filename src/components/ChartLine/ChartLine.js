@@ -31,7 +31,7 @@ const ChartLine = ({
       <div
         className={styles.lineDataWrapper}
       >
-        <div>
+        <div style={{justifySelf: "end"}}>
           <div className={styles.companyTitle}>{name}</div>
           <div className={styles.optionsWrapper}>
             {options &&

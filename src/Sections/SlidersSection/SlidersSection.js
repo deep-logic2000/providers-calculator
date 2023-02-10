@@ -30,7 +30,7 @@ const SliderComponent = () => {
       style={{
         display: "flex",
         flexDirection: isMobile ? "column" : "row",
-        width: isMobile ? "80%" : "",
+        width: isMobile ? "60%" : "",
         margin: isMobile ? "0 auto" : "",
         gap: isMobile ? "0px" : "50px",
         justifyContent: "space-between",

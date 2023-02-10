@@ -1,23 +1,22 @@
 .container {
-    max-width: 1280px;
-    margin: 0 auto;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 90%;
     background-image: url(../../assets/images/graph-bg.png);
     background-repeat: no-repeat;
     background-position: 0 10px;
     background-size: 100% 67%;
     border-radius: 10px 10px 0 0;
-}
+  }
 
-
-@media (max-width: 768px) {
-    .container {
-        display: flex;
-        justify-content: center;
-        padding: 10px;
-        width: 90%;
-    }
-
-    .lineWrapper {
-        min-width: 23%;
-    }
+  .lineWrapper {
+    min-width: 23%;
+  }
 }

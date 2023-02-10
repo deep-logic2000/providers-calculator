@@ -54,7 +54,7 @@ const ChartLine = ({
       <div
         style={{
           height: isMobile ? `${priceValue * 2.5}px` : "25px",
-          width: isMobile ? "50%" : `${priceValue * 4}px`,
+          width: isMobile ? "70%" : `${priceValue * 4}px`,
           backgroundColor: isMinimal ? `${color}` : "lightGray",
         }}
       ></div>

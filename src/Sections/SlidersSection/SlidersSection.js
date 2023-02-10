@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "rc-slider";
 import { useSelector, useDispatch } from "react-redux";
+import { useViewPort } from "../../hooks/useViewPort";
 
 import {
   setStorageValue,
@@ -14,6 +15,8 @@ const SliderComponent = () => {
   const dispatch = useDispatch();
   const storageValue = useSelector(({ price }) => price.storageValue);
   const transferValue = useSelector(({ price }) => price.transferValue);
+  const { width } = useViewPort();
+  const isMobile = width <= 768;
 
   const onSliderStorageChange = (value) => {
     dispatch(setStorageValue(value));
@@ -26,9 +29,12 @@ const SliderComponent = () => {
     <div
       style={{
         display: "flex",
-        gap: "50px",
+        flexDirection: isMobile ? "column" : "row",
+        width: isMobile ? "80%" : "",
+        margin: isMobile ? "0 auto" : "",
+        gap: isMobile ? "0px" : "50px",
         justifyContent: "space-between",
-        marginBottom: "30px",
+        marginBottom: isMobile ? "" : "30px",
       }}
     >
       <div style={{ minWidth: "40%" }}>

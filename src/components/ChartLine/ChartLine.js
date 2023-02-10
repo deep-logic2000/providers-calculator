@@ -58,7 +58,7 @@ const ChartLine = ({
           backgroundColor: isMinimal ? `${color}` : "lightGray",
         }}
       ></div>
-      <span>{priceValue}</span>
+      <span className={styles.priceValue}>{priceValue}</span>
     </div>
   );
 };

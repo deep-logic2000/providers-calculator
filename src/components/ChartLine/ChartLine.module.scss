@@ -32,14 +32,14 @@
 }
 
 @media (max-width: 768px) {
-    .companyTitle {
-        text-align: center;
-        font-size: 14px;
-      }
+  .companyTitle {
+    text-align: center;
+    font-size: 14px;
+  }
 
-      .optionName {
-        font-size: 11px;
-      }
+  .optionName {
+    font-size: 11px;
+  }
 
   .lineDataWrapper {
     border-right: none;
@@ -64,14 +64,36 @@
     flex-wrap: wrap;
     justify-content: center;
     // align-items: start;
+
+    & input {
+      height: 8px;
+      width: 8px;
+    }
   }
 
   .optionsWrapper {
     display: flex;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     // justify-content: space-between;
     // align-items: center;
     // margin-top: 20px;
   }
 }
 
+@media (max-width: 430px) {
+  .optionsWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .radioWrapper {
+    & input {
+      height: 6px;
+      width: 6px;
+    }
+  }
+
+  .priceValue {
+    font-size: 11px;
+  }
+}

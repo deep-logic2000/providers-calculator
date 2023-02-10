@@ -180,7 +180,7 @@ const ChartContainer = () => {
               options={line.options}
               onChangeValue={onChangeOptionName}
               selectedOptionName={selectedOptionName}
-              isMobile={width < 768}
+              isMobile={width <= 768}
             />
           </div>
         );

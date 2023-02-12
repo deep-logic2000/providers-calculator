@@ -31,10 +31,10 @@ const SliderComponent = () => {
         display: "flex",
         flexDirection: isMobile ? "column" : "row",
         width: isMobile ? "60%" : "",
-        margin: isMobile ? "0 auto" : "",
+        margin: isMobile ? "20px auto" : "",
         gap: isMobile ? "0px" : "50px",
         justifyContent: "space-between",
-        marginBottom: isMobile ? "" : "30px",
+        marginBottom: isMobile ? "20px" : "30px",
       }}
     >
       <div style={{ minWidth: "40%" }}>

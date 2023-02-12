@@ -9,6 +9,7 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .sliders__wrapper {
@@ -19,11 +20,12 @@
 }
 
 @media screen and (max-width: 768px) {
+
   .slider__title {
     font-size: 14px;
   }
   .edgeValues__wrapper {
-    margin-bottom: 0;
+    margin-bottom: 20px;
     font-size: 12px;
   }
 }

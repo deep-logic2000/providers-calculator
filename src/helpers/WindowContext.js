@@ -6,9 +6,11 @@ const ViewportProvider = ({ children }) => {
   const [width, setWidth] = useState(window.screen.width);
   const [height, setHeight] = useState(window.screen.height);
 
+  
+
   const handleWindowResize = () => {
-    setWidth(window.screen.width);
-    setHeight(window.screen.width);
+    setWidth(window.innerWidth);
+    setHeight(window.innerHeight);
   };
 
   useEffect(() => {

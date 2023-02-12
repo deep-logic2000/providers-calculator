@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback, useMemo } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import {
   setCompaniesData,
@@ -171,9 +171,8 @@ const ChartContainer = () => {
           (option) => option.isActive
         ).name;
         return (
-          <div className={styles.lineWrapper}>
+          <div className={styles.lineWrapper} key={index}>
             <ChartLine
-              key={index}
               {...line}
               priceValue={getPriceValue(line.id, line.options).toFixed(2)}
               isMinimal={checkIsMinimal(line.id)}

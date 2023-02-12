@@ -3,8 +3,8 @@ import React, { createContext, useState, useEffect } from "react";
 const viewportContext = createContext({});
 
 const ViewportProvider = ({ children }) => {
-  const [width, setWidth] = useState(window.screen.width);
-  const [height, setHeight] = useState(window.screen.height);
+  const [width, setWidth] = useState(window.innerWidth);
+  const [height, setHeight] = useState(window.innerWidth);
 
   
 

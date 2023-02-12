@@ -6,8 +6,6 @@ import "./App.scss";
 
 function App() {
 
-  console.log("ViewportProvider", ViewportProvider);
-
   return (
     <ViewportProvider>
       <div className="container">
